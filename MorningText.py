@@ -45,7 +45,7 @@ data = json.load(response)
 # response = urllib2.urlopen(url_string)
 # data = json.load(response)
 
-# process the information. NEEDS TO BE IMPLEMENTED! 
+# process the information. 
 data_one = data["data"]
 games = data_one["games"] # going to need a for loop here in the future to search for the M's games.
 game_one = games["game"]
