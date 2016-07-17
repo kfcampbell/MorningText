@@ -100,5 +100,5 @@ for game in game_one:
 if not message_sent:
     body = "The M's are off today."
     client = TwillioRestClient(account_sid, auth_token)
-    message - client.messages.create(body=body, to=keegan_number, from_=from_number)
+    message = client.messages.create(body=body, to=keegan_number, from_=from_number)
     message_sent = True
