@@ -41,7 +41,7 @@ response = urllib2.urlopen(url_string)
 data = json.load(response)
 
 # dummy practice for processing. remove later.
-# url_string = "http://gd2.mlb.com/components/game/mlb/year_2016/month_07/day_15/master_scoreboard.json"
+# url_string = "http://gd2.mlb.com/components/game/mlb/year_2016/month_07/day_25/master_scoreboard.json"
 # response = urllib2.urlopen(url_string)
 # data = json.load(response)
 
@@ -102,6 +102,6 @@ for game in game_one:
 
 if not message_sent:
     body = "The M's are off today."
-    client = TwillioRestClient(account_sid, auth_token)
+    client = TwilioRestClient(account_sid, auth_token)
     message = client.messages.create(body=body, to=keegan_number, from_=from_number)
     message_sent = True
