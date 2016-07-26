@@ -56,10 +56,13 @@ message_sent = False
 for game in game_one:
     if game["away_team_name"] == "Mariners" or game["home_team_name"] == "Mariners":
         game_time = ""
+        other_team = ""
         if game["away_team_name"] == "Mariners":
             game_time = game["away_time"]
+            other_team = game["home_team_name"]
         elif game["home_team_name"] == "Mariners":
             game_time = game["home_time"]
+            other_team = game["away_team_name"]
         # print game_time
 
         game_string = game["away_team_name"] + " at " + game["home_team_name"]
@@ -87,7 +90,7 @@ for game in game_one:
         # print pitcher_string
 
         # construct the message. this is an example that needs to be changed to actual data once the All-Star break is over.
-        body = "The Mariners game today is at " + game_time + ".\n"
+        body = "The Mariners game today is at " + game_time + " against the " + other_team + ".\n"
         body += pitcher_string + "."
         print body
 
